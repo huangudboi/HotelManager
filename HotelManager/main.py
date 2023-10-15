@@ -50,15 +50,15 @@ class FaceRecognitionProcess:
             sign_face=False
             have_face=False
             small_frame = cv2.resize(_frame, (0, 0), fx=0.25, fy=0.25)
-    # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
+            # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
             rgb_small_frame = small_frame[:, :, ::-1]
-    # Find all the faces and face encodings in the current frame of video
+            # Find all the faces and face encodings in the current frame of video
             name = "Unknown"
             face_locations =face_recognition .face_locations(rgb_small_frame,model="cnn")
             if len(face_locations)!=0:
                 have_face=True
                 face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
-        # face_names = []
+                # face_names = []
                 for face_encoding in face_encodings:
                     face_distances = face_recognition.face_distance(self.data["encodings"], face_encoding)
                     best_match_index = np.argmin(face_distances)

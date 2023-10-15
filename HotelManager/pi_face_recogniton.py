@@ -8,12 +8,12 @@ import imutils
 import pickle
 import time
 import cv2
+
 ap = argparse.ArgumentParser()
 ap.add_argument("-e", "--encodings", required=True,
 	help="path to serialized db of facial encodings")
 args = vars(ap.parse_args())
-# load the
-# cascade for face detection
+# load the cascade for face detection
 print("[INFO] loading encodings + face detector...")
 data = pickle.loads(open(args["encodings"], "rb").read())
 detector = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")

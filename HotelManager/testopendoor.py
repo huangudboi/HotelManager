@@ -127,7 +127,7 @@ try:
     # print(count)
         if count%30==0:
             #img=frame[y_start:y_start+300,x_start:x_start+300]
-            #name,sig_face=Recog_face(img,data)
+            # name,sig_face=Recog_face(img,data)
             name,sig_face,hv_face=Recog_face(frame,data)
             if hv_face:
                 if sig_face:

@@ -1,7 +1,7 @@
-# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
-# SPDX-License-Identifier: MIT
 # đây là file nhận diện vân tay 
 
+# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-License-Identifier: MIT
 import time
 import board
 #import busio
@@ -199,7 +199,7 @@ while True:
         else: #update data when ID is exsit
             cursor.execute('UPDATE fingerprint_dtb SET name = ? WHERE id = ?', name, id)
             conn.commit()
-            print('Add new fingerprint finnish!')
+            print('Add new fingerprint finish!')
 
     if c == "f": #Find fingerprint
         if get_fingerprint():

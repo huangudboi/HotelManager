@@ -5,6 +5,7 @@ from tkinter import *
 import time
 from threading import Thread,Event
 import tkinter.messagebox as messagebox
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 class Keypad():
@@ -13,9 +14,9 @@ class Keypad():
         self.COL = [21,23,35,37]
         self.ROW = [32,36,38,40]
         self.MATRIX =   [["1","2","3","A"],
-              ["4","5","6","B"],
-              ["7","8","9","C"],
-              ["*","0","#","D"]]
+                        ["4","5","6","B"],
+                        ["7","8","9","C"],
+                        ["*","0","#","D"]]
 
         self.result=""
         self.pre_setup()
@@ -132,11 +133,3 @@ class Keypad():
                 evt_keypad.set()
                 #GPIO.cleanup()
             
-
-            
-'''class gl:
-    def __init__(self):
-        gl.unlock=False
-e=Event()
-k=Keypad()
-k.run(e,gl)'''

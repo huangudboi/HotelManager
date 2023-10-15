@@ -1,6 +1,7 @@
 import os
 import multiprocessing
 from functools import wraps
+
 def ensure_parent(func):
     @wraps(func)
     def inner(self, *args, **kwargs):

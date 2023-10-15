@@ -10,6 +10,7 @@ import numpy as np
 import RPi.GPIO as GPIO
 import time
 import keypad
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
@@ -142,11 +143,12 @@ if __name__ == '__main__':
     Global.is_exit = False
     Global.name='Unknown'
     Global.hv_face=False
-    #main_process=Main_process()
-    #k=keypad()
-    p=Process(target=capture, args=(Global,e_keypad,e_unlock,que,))
-    #p1=Process(target=process,args=(Global,que,e_keypad,e_unlock,))
-    #p2=Process(target=main_process.run,args=(Global,e_unlock,))
+    # main_process=Main_process()
+    # k=keypad()
+    p=Process(target=capture, args=(Global,evt_keypad,evt_unlock,que,))
+    p1=Process(target=process,args=(Global,que,evt_keypad,evt_unlock,))
+    # p2=Process(target=main_process.run,args=(Global,evt_unlock,))
+    # p3=Process(target=k.run,args=(evt_keypad,Global,))
     p.start()
     #p1.start()
     #p2.start()
