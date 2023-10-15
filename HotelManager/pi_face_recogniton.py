@@ -1,3 +1,5 @@
+# file face recognition mở và đóng cửa khi nhận diện khuôn mặt
+
 from imutils.video import VideoStream
 from imutils.video import FPS
 import face_recognition

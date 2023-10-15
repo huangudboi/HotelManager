@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
+# đây là file nhận diện vân tay 
 
 import time
 import board
@@ -160,7 +161,7 @@ def enroll_finger(location):
             print("Bad storage location")
         elif i == adafruit_fingerprint.FLASHERR:
             print("Flash storage error")
-        else:
+        else: 
             print("Other error")
         return False
     return True

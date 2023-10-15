@@ -1,3 +1,5 @@
+# đây là file mở cửa bằng mật mã
+
 import RPi.GPIO as GPIO
 from tkinter import *
 import time

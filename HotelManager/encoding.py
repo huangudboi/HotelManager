@@ -1,11 +1,12 @@
 # import the necessary packages
+# đầy là file để chạy chương trình train model
 from imutils import paths
 import face_recognition
 import argparse
 import pickle
 import cv2
 import os
-# construct the argument parser and parse the argumentsds
+# construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--dataset", required=True,
 	help="path to input directory of faces + images")

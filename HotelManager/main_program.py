@@ -1,3 +1,5 @@
+# Chương trình chính của toàn bộ hệ thống mở cửa
+
 import sys
 sys.path.append('./.local/lib/python3.9/site-packages/')
 import cv2
